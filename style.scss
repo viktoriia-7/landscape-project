@@ -1,0 +1,85 @@
+@import "./variables";
+@import "./header.scss";
+@import "./reset.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 144px;
+  background: linear-gradient(#0c4b35 50%, white 50%);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav {
+  position: relative;
+}
+
+.top_navbar {
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+  a {
+    padding-right: 30px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+  }
+}
+
+.top_navbar_lang {
+  position: absolute;
+  top: 24px;
+  right: 1px;
+  a {
+    color: white;
+    font-size: 16px;
+    padding-right: 5px;
+    text-decoration: none;
+  }
+}
+
+.logo {
+  padding-right: 350px;
+}
+
+.navbar_down {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  ul {
+    display: flex;
+  }
+  li {
+    padding-right: 50px;
+  }
+  a {
+    text-decoration: none;
+    padding-right: 5px;
+    color: #212529;
+  }
+}
+button {
+  width: 170px;
+  height: 50px;
+  background-color: #00730c;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+}
