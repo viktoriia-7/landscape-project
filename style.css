@@ -16,6 +16,7 @@ header {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .nav {
@@ -69,6 +70,11 @@ header {
   color: #212529;
 }
 
+.menu a:hover {
+  color: #00730c;
+  font-weight: 600;
+}
+
 .btn {
   width: 170px;
   height: 50px;
@@ -93,31 +99,51 @@ header {
   font-weight: 700;
 }
 
+.sub_btn {
+  display: none;
+}
+
+.menu_burger {
+  display: none;
+}
+
 main {
   height: 719px;
-  background: url(./img/home_1.jpg) no-repeat 650px 46px, url(./img/home_bg.jpg);
+  background: linear-gradient(79.58deg, rgba(0, 115, 12, 0.81) -39.14%, rgba(251, 246, 238, 0) 90.23%);
 }
 
 .home_container {
+  display: flex;
+  flex-direction: row;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .home_content {
   padding-top: 133px;
+  position: relative;
+}
+
+.content_bg {
+  position: absolute;
+  top: 46px;
+  left: 650px;
+}
+.content_bg img {
+  max-width: 100%;
 }
 
 .home_subtitle_1 {
   font-size: 16px;
   font-weight: 700;
   color: #212529;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   background: url(./img/icon1_home.svg) no-repeat left top;
 }
 .home_subtitle_1 p {
   padding-left: 30px;
-  padding-top: 5px;
 }
 
 h1 {
@@ -126,6 +152,7 @@ h1 {
   color: #212529;
   line-height: 79px;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 h1 span {
   color: #00730c;
@@ -193,18 +220,26 @@ h1 span {
   margin-right: 10px;
 }
 
+.home_achievement_sub {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .container {
-    width: 100%;
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px 0 10px;
   }
   .top_navbar img {
-    padding-left: 10px;
+    padding-right: 20px;
   }
   .top_navbar a {
     display: none;
+  }
+  .navbar_down {
+    position: relative;
+  }
+  .navbar_down .logo {
+    padding: 0;
   }
   .navbar_down ul {
     display: none;
@@ -212,5 +247,100 @@ h1 span {
   .navbar_down .btn {
     width: 40px;
     height: 34px;
+    border-radius: 10px;
+    position: absolute;
+    right: 50px;
+  }
+  .navbar_down .btn span {
+    display: none;
+  }
+  .navbar_down .menu_burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+  }
+  .navbar_down .menu_burger span {
+    position: absolute;
+    background-color: #00730c;
+    border-radius: 5px;
+    width: 100%;
+    height: 2.34px;
+    left: 0;
+    top: 9px;
+  }
+  .navbar_down .menu_burger:before,
+  .navbar_down .menu_burger:after {
+    content: "";
+    position: absolute;
+    background-color: #00730c;
+    border-radius: 5px;
+    width: 100%;
+    height: 2.34px;
+    left: 0;
+  }
+  .navbar_down .menu_burger:before {
+    top: 0;
+  }
+  .navbar_down .menu_burger:after {
+    bottom: 0;
+  }
+  .home_container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .home_content {
+    max-width: 346px;
+  }
+  .home_content p {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 38px;
+    margin: 0;
+  }
+  .home_btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .home_btn .btn_2 {
+    width: 303px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .home_btn p {
+    margin-bottom: 40px;
+    color: #00730c;
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: url(./img/arrow.svg) no-repeat right;
+  }
+  .home_achievement {
+    display: none;
+  }
+  .home_achievement_sub {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .home_achievement_sub span {
+    width: 135px;
+    height: 32px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #fff8f1 0%, #cbe5ce 100%);
+    border-radius: 32px;
+    margin-right: 10px;
+  }
+  .home_achievement_sub p {
+    font-size: 10px;
+    padding-left: 5px;
   }
 }/*# sourceMappingURL=style.css.map */
